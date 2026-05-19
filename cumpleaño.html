@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="cumple.css">
+</head>
+<body>
+      <div class="container">
+        <!-- Título principal -->
+        <h1>¡Feliz Cumpleaños, Manuuuuuuuuu! 🎉</h1>
+        
+        <!-- Tu mensaje personalizado -->
+        <p class="message">
+            FELIZZZZZZZZZZZZZZ CUMMPLEEEEEEEEEEEEEEEAS🎂✨
+        </p>
+        <br>
+        <p>FELIZ DIA en esta fecha de hoy naciste :D</p>
+
+        <!-- Galería de fotos (Reemplaza los enlaces por tus fotos) -->
+        <div class="gallery">
+            <img src="c:\Users\boffi\OneDrive\Imágenes\la_roca.png" alt="EXTRAORDINARY ROCK">
+            <P>no hay presupuesto,P.D.: NO HAY MAS fotos si mejores regalos asi manda foto por antelacion xD,</P>
+        </div>
+
+    <div class="video-container">
+        <h3>¡RECUERDOS!</h3>
+            <video controls>
+                <source src="video.mp4.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Botón de Sorpresa -->
+        <button class="btn-surprise" onclick="lanzarConfeti()">¡ CONFETIIIIIIIII!</button>
+    </div>
+
+    <script>
+        // --- EFECTOS INTERACTIVOS (JavaScript) ---
+        function lanzarConfeti() {
+            const colores = ['#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f72585', '#7209b7', '#4cc9f0'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confeti = document.createElement('div');
+                confeti.classList.add('confetti');
+                
+                // Propiedades aleatorias para cada trozo de confeti
+                confeti.style.left = Math.random() * 100 + 'vw';
+                confeti.style.animationDuration = (Math.random() * 2 + 2) + 's'; 
+                confeti.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
+                confeti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+                
+                document.body.appendChild(confeti);
+                
+                // Limpiar el HTML para que no se sature de elementos creados
+                setTimeout(() => {
+                    confeti.remove();
+                }, 4000);
+            }
+        }
+    </script>
+</body>
+</html>
